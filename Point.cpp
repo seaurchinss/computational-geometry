@@ -1,3 +1,5 @@
+//2次元平面
+
 #include<iostream>
 #include<cmath>
 using namespace std;
@@ -33,6 +35,18 @@ struct Point{
     }
     //ベクトルが同じかどうか
 };
+
+typedef Point Vector;
+
+double dot(Vector a, Vector b){
+    return a.x*b.x + a.y*b.y;
+}
+//ベクトルの内積(dot product)
+
+double cross(Vector a,Vector b){
+    return a.x*b.y - a.y*b.x;
+}
+//ベクトルの外積(cross product)の大きさ(平行四辺形の大きさ)
 
 int main(){
     double a,b;
